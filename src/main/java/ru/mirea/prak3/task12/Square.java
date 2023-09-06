@@ -25,6 +25,15 @@ public class Square extends Rectangle {
         super.setWidth(length);
     }
 
+    public void setSide(double side) {
+        super.setLength(length);
+        super.setWidth(length);
+    }
+
+    public double getSide() {
+        return length;
+    }
+
     @Override
     public String toString() {
         return "Square{" + "width=" + width +
