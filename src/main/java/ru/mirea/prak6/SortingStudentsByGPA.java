@@ -5,12 +5,17 @@ import java.util.Comparator;
 import java.util.List;
 
 public class SortingStudentsByGPA implements Comparator<Student> {
+
     @Override
     public int compare(Student student1, Student student2) {
-        // Сравниваем студентов по их итоговым баллам в порядке убывания
-        return Integer.compare(student2.getScore(), student1.getScore());
+        if (student1.getScore() > student2.getScore()) {
+            return -1;
+        } else if (student1.getScore() < student2.getScore()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
-
     // Метод для сортировки списка студентов с использованием алгоритма быстрой сортировки
     public void quickSort(List<Student> students, int low, int high) {
         if (low < high) {
@@ -43,15 +48,15 @@ public class SortingStudentsByGPA implements Comparator<Student> {
 
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
-        students.add(new Student("Иван", "Иванов", 3, 85));
-        students.add(new Student("Петр", "Петров", 2, 92));
-        students.add(new Student("Анна", "Сидорова", 4, 78));
+        students.add(new Student(1, "Иван", "Иванов", 3, 8.5));
+        students.add(new Student(2, "Петр", "Петров", 2, 9.2));
+        students.add(new Student(3, "Анна", "Сидорова", 4, 7.8));
 
         SortingStudentsByGPA comparator = new SortingStudentsByGPA();
         comparator.quickSort(students, 0, students.size() - 1);
 
         for (Student student : students) {
-            System.out.println(student.getName() + " " + student.getSurname() + ": " + student.getScore());
+            System.out.println(student);
         }
     }
 }

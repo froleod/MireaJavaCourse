@@ -1,16 +1,26 @@
 package ru.mirea.prak6;
 
 public class Student {
+    private int id;
     private String name;
     private String surname;
     private int course;
-    private int score;
+    private double score;
 
-    public Student(String name, String surname, int course, int score) {
+    public Student(int id, String name, String surname, int course, double score) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.course = course;
         this.score = score;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -37,11 +47,21 @@ public class Student {
         this.course = course;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", course=" + course +
+                ", score=" + score +
+                '}';
     }
 }
