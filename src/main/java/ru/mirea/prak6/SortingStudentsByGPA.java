@@ -16,7 +16,8 @@ public class SortingStudentsByGPA implements Comparator<Student> {
             return 0;
         }
     }
-    // Метод для сортировки списка студентов с использованием алгоритма быстрой сортировки
+
+    // Метод для сортировки списка студентов быстрой сортировкой
     public void quickSort(List<Student> students, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(students, low, high);

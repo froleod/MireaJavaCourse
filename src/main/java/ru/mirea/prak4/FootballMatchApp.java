@@ -9,7 +9,7 @@ public class FootballMatchApp extends JFrame {
     private int madridScore = 0;
     private JLabel resultLabel;
     private JLabel lastScorerLabel;
-    private JLabel winnerLabel;
+    private Label winnerLabel;
 
     public FootballMatchApp() {
         setTitle("Football Match");
@@ -25,7 +25,7 @@ public class FootballMatchApp extends JFrame {
 
         resultLabel = new JLabel("Result: 0 X 0");
         lastScorerLabel = new JLabel("Last Scorer: N/A");
-        winnerLabel = new JLabel("Winner: DRAW");
+        winnerLabel = new Label("Winner: DRAW");
 
         milanButton.addActionListener(new ActionListener() {
             @Override

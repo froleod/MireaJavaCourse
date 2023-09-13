@@ -7,6 +7,26 @@ public class Rectangle extends Shape {
     public Rectangle() {
     }
 
+    @Override
+    String getColor() {
+        return color;
+    }
+
+    @Override
+    void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    boolean isFilled() {
+        return filled;
+    }
+
+    @Override
+    void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+
     public Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
@@ -40,7 +60,7 @@ public class Rectangle extends Shape {
     }
 
     public double getPerimeter() {
-        return 2 * (width + length);
+        return 2 * (this.width + this.length);
     }
 
     @Override

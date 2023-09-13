@@ -7,6 +7,26 @@ public class Circle extends Shape{
     public Circle() {
     }
 
+    @Override
+    String getColor() {
+        return color;
+    }
+
+    @Override
+    void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
+    boolean isFilled() {
+        return filled;
+    }
+
+    @Override
+    void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+
     public Circle(double radius) {
         this.radius = radius;
     }

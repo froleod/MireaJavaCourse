@@ -17,17 +17,13 @@ public class CardGame {
             player1.add(Integer.parseInt(String.valueOf(deck1.charAt(i))));
         for (int i = 0; i < 5; i++)
             player2.add(Integer.parseInt(String.valueOf(deck2.charAt(i))));
-        while ((!player1.isEmpty() && !player2.isEmpty()) && k != 106)
-        {
+        while ((!player1.isEmpty() && !player2.isEmpty()) && k != 106) {
             k++;
             int a = player1.getFirst(), b = player2.getFirst();
-            if ((a > b || a == 0 && b == 9) && !(a == 9 && b == 0))
-            {
+            if ((a > b || a == 0 && b == 9) && !(a == 9 && b == 0)) {
                 player1.add(a);
                 player1.add(b);
-            }
-            else
-            {
+            } else {
                 player2.add(a);
                 player2.add(b);
             }

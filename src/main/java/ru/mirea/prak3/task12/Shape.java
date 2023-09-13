@@ -12,28 +12,20 @@ public abstract class Shape {
         this.filled = filled;
     }
 
-    public String getColor() {
-        return color;
-    }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
+    abstract String getColor();
 
-    public boolean isFilled(){return filled;};
+    abstract void setColor(String color);
 
-    public void setFilled(boolean filled) {
-        this.filled = filled;
-    }
+
+    abstract boolean isFilled();
+
+
+    abstract void setFilled(boolean filled);
+
 
     abstract double getArea();
     abstract double getPerimeter();
 
-    @Override
-    public String toString() {
-        return "Shape{" +
-                "color='" + color + '\'' +
-                ", filled=" + filled +
-                '}';
-    }
+
 }

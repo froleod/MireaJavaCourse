@@ -26,12 +26,17 @@ public class Square extends Rectangle {
     }
 
     public void setSide(double side) {
-        super.setLength(length);
-        super.setWidth(length);
+        super.setLength(side);
+        super.setWidth(side);
     }
 
     public double getSide() {
         return length;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return super.getPerimeter();
     }
 
     @Override
