@@ -31,7 +31,7 @@ public class SortingStudentsByGPA implements Comparator<Student> {
         int i = low - 1;
 
         for (int j = low; j < high; j++) {
-            if (compare(students.get(j), pivot) > 0) {
+            if (compare(students.get(j), pivot) < 0) {
                 i++;
                 swap(students, i, j);
             }
@@ -55,6 +55,8 @@ public class SortingStudentsByGPA implements Comparator<Student> {
 
         SortingStudentsByGPA comparator = new SortingStudentsByGPA();
         comparator.quickSort(students, 0, students.size() - 1);
+
+
 
         for (Student student : students) {
             System.out.println(student);
