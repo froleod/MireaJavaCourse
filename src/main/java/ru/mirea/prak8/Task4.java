@@ -13,7 +13,7 @@ public class Task4 {
             System.out.print(i + " ");
         }
         System.out.println();
-        arr = Arrays.stream(arr).sorted().toArray();
+        Arrays.sort(arr);
 
         for(int i: arr){
             System.out.print(i + " ");
