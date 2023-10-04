@@ -14,6 +14,6 @@ public class doWhileSum {
             sum += arr[i];
             i++;
         } while (i < arr.length);
-        System.out.println("sum = " + sum);
+        System.out.println("doWhile sum = " + sum);
     }
 }

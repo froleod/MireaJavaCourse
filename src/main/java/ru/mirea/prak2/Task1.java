@@ -1,6 +1,5 @@
 package ru.mirea.prak2;
 
-
 import static ru.mirea.prak2.doWhileSum.doWhileSumArr;
 import static ru.mirea.prak2.forSum.forSumArr;
 import static ru.mirea.prak2.whileSum.whileSumArr;

@@ -1,0 +1,2 @@
+some text in file4
+new text in file4

@@ -12,6 +12,6 @@ public class whileSum {
             sum += arr[i];
             i++;
         }
-        System.out.println("sum = " + sum);
+        System.out.println("while sum = " + sum);
     }
 }
