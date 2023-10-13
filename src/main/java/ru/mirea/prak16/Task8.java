@@ -4,19 +4,17 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Task8 {
-    public void getKey() {
+    public static void getKey() {
         Scanner myScanner = new Scanner(System.in);
-        String key = myScanner.next();
-        try{                    // TODO: Добавьте цикл к getKey() таким образом, чтобы пользователь получил
-                                // TODO: еще один шанс на ввод значение ключа
+        String key = myScanner.nextLine();
+        try {
             printDetails(key);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
 
-    public void printDetails(String key) throws Exception {
+    public static void printDetails(String key) throws Exception {
         try {
             String message = getDetails(key);
             System.out.println(message);
@@ -25,10 +23,14 @@ public class Task8 {
         }
     }
 
-    private String getDetails(String key) throws Exception {
+    private static String getDetails(String key) throws Exception {
         if (Objects.equals(key, "")) {
             throw new Exception("Key set to empty string");
         }
         return "data for " + key;
+    }
+
+    public static void main(String[] args) {
+        getKey();
     }
 }
