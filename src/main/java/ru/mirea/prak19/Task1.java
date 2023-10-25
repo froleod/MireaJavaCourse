@@ -19,5 +19,6 @@ public class Task1 {
         ArrayList<String> strings = new ArrayList<>();
         System.out.println(Convertion(str, strings));
 
+
     }
 }

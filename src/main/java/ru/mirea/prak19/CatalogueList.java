@@ -11,7 +11,6 @@ import java.util.List;
 
 public class CatalogueList {
 
-
     public static void main(String[] args) {
         String directoryPath = "C:\\Users\\main\\IdeaProjects\\mirea\\prak0409\\src\\main\\java\\ru\\mirea\\prak10";
 
@@ -23,8 +22,8 @@ public class CatalogueList {
             try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(dirPath)) {
                 for (Path path : directoryStream) {
                     fileList.add(path.getFileName().toString());
-                    try(DirectoryStream<Path> childDirectory = Files.newDirectoryStream(path)) {
-                        for(Path path2: childDirectory){
+                    try (DirectoryStream<Path> childDirectory = Files.newDirectoryStream(path)) {
+                        for (Path path2 : childDirectory) {
                             fileList.add(path2.getFileName().toString());
                         }
                     }

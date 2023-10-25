@@ -4,11 +4,9 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class ReversedPolishNotation {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
+    public static int RPN(String rpn) {
         Stack<Integer> stack = new Stack<>();
-        String rpn = sc.nextLine();
 
         for (int i = 0; i < rpn.length(); i++) {
             char c = rpn.charAt(i);
@@ -29,7 +27,7 @@ public class ReversedPolishNotation {
                     if (!stack.isEmpty() && stack.size() >= 2) {
                         int num1 = stack.pop();
                         int num2 = stack.pop();
-                        System.out.println(num1 + " " + num2);
+//                        System.out.println(num1 + " " + num2);
                         stack.push(num2 + num1);
                     } else {
                         System.out.println("Invalid syntax :/");
@@ -43,8 +41,7 @@ public class ReversedPolishNotation {
 //                        System.out.println(num2);
                         stack.push(num2 - num1);
                     } else {
-                        System.out.println("Invalid syntax :/");
-                        System.exit(1);
+                        throw new IllegalArgumentException("Invalid syntax :/");
                     }
                 } else if (c == '/') {
                     if (!stack.isEmpty() && stack.size() >= 2) {
@@ -57,20 +54,19 @@ public class ReversedPolishNotation {
                             System.exit(1);
                         }
                     } else {
-                        System.out.println("Invalid syntax :/");
-                        System.exit(1);
+                        throw new IllegalArgumentException("Invalid syntax :/");
                     }
-                    System.out.println(stack.peek());
+//                    System.out.println(stack.peek());
                 } else {
-                    System.out.println("Unknown symbol :/");
-                    System.exit(1);
+                    throw new IllegalArgumentException("Invalid syntax :/");
                 }
             }
         }
 
         if (!stack.empty()) {
-            System.out.println(stack.pop());
+            return stack.pop();
         }
-
+        return -1;
     }
+
 }
