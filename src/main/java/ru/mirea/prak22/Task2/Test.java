@@ -6,9 +6,8 @@ public class Test {
 //        ChairFactory chairFactory = Client.set
 
         Client chair = new Client();
-        chair.setChair(new MagicChair());
+        chair.setChair(new VictorianChair(5));
         chair.sit();
 
-        System.out.println(chair);
     }
 }
