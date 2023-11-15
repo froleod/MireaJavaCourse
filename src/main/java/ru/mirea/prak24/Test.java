@@ -30,7 +30,6 @@ public class Test {
 
         System.out.println("Список заказов: " + ordersManager.getOrders());
 
-        ordersManager.
         order1.remove(vodka);
         System.out.println(order1.getItems());
     }
