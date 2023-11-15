@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public interface Order {
     boolean add(MenuItem item);
-    String[] itemNames();
+    LinkedList<String> itemNames();
     int itemsQuantity();
     int itemQuantity(String itemName);
     int itemQuantity(MenuItem itemName);

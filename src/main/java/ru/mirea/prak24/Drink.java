@@ -23,4 +23,12 @@ public final class Drink extends MenuItem implements Alcoholable {
     public double getAlcoholVol() {
         return alcoholVol;
     }
+
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "alcoholVol=" + alcoholVol +
+                ", type=" + type +
+                '}';
+    }
 }

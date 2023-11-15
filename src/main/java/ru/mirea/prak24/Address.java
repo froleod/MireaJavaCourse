@@ -8,7 +8,16 @@ public final class Address {
     private char buildingLetter;
     private int apartmentNumber;
 
-    public Address EMPTY_ADDRESS;
+    public static Address EMPTY_ADDRESS;
+
+    public Address(String cityName, int zipCode, String streetName, int buildingNumber, char buildingLetter, int apartmentNumber) {
+        this.cityName = cityName;
+        this.zipCode = zipCode;
+        this.streetName = streetName;
+        this.buildingNumber = buildingNumber;
+        this.buildingLetter = buildingLetter;
+        this.apartmentNumber = apartmentNumber;
+    }
 
     public String getCityName() {
         return cityName;
@@ -32,5 +41,17 @@ public final class Address {
 
     public int getApartmentNumber() {
         return apartmentNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "cityName='" + cityName + '\'' +
+                ", zipCode=" + zipCode +
+                ", streetName='" + streetName + '\'' +
+                ", buildingNumber=" + buildingNumber +
+                ", buildingLetter=" + buildingLetter +
+                ", apartmentNumber=" + apartmentNumber +
+                '}';
     }
 }

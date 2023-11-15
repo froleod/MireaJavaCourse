@@ -18,4 +18,12 @@ public final class Dish extends MenuItem {
         this.dishDescription = dishDescription;
     }
 
+    @Override
+    public String toString() {
+        return "Dish{" +
+                "dishCost=" + dishCost +
+                ", dishName='" + dishName + '\'' +
+                ", dishDescription='" + dishDescription + '\'' +
+                '}';
+    }
 }
